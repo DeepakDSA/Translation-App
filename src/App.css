@@ -1,0 +1,245 @@
+/* app.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 28px;
+  color: #007bff;
+}
+
+.app-header input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.translation-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.translation-container textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.language-selectors {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.language-selectors select {
+  width: 48%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.output-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.output-section h3 {
+  font-size: 22px;
+  color: #444;
+}
+
+.output-section p {
+  font-size: 18px;
+  color:coral;
+  margin-top: 10px;
+}
+
+.feedback {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.feedback button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  background-color: #218838;
+}
+
+.history-section {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.history-section h3 {
+  font-size: 22px;
+  text-align: center;
+  color: brown;
+}
+
+.history-section ul {
+  list-style-type: none;
+}
+
+.history-section ul li {
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.history-section p {
+  text-align: center;
+  color: #888;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .light .app-header h1,
+  .dark .app-header h1 {
+    font-size: 20px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .light .history-section,
+  .dark .history-section {
+    padding: 8px;
+  }
+
+  .light .history-section ul li,
+  .dark .history-section ul li {
+    font-size: 14px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  .app {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .light .app-header h1,
+  .dark .app-header h1 {
+    font-size: 22px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  .light .history-section,
+  .dark .history-section {
+    padding: 10px;
+  }
+
+  .light .history-section ul li,
+  .dark .history-section ul li {
+    font-size: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .app {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .light .app-header h1,
+  .dark .app-header h1 {
+    font-size: 24px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .light .history-section,
+  .dark .history-section {
+    padding: 12px;
+  }
+
+  .light .history-section ul li,
+  .dark .history-section ul li {
+    font-size: 16px;
+  }
+}
