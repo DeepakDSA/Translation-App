@@ -1,0 +1,183 @@
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b3003f;
+}
+
+/* Light Theme */
+.light {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: #333;
+}
+
+.light .app-header {
+  background: #e6f7ff;
+  color: #007bff;
+}
+
+.light .app-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.light .app-header input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.light .translation-container textarea {
+  border: 1px solid #ccc;
+}
+
+.light .feedback button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.light .history-section {
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.light .history-section ul {
+  list-style-type: none;
+}
+
+.light .history-section ul li {
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Dark Theme */
+.dark {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply, multiply;
+  color: #fff;
+}
+
+.dark .app-header {
+  background: #2a2a2a;
+}
+
+.dark .app-header h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.dark .translation-container textarea {
+  border: 1px solid #555;
+  background: #222;
+  color: #fff;
+}
+
+.dark .feedback button {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark .history-section {
+  background: #333;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dark .history-section ul {
+  list-style-type: none;
+}
+
+.dark .history-section ul li {
+  background-color: #444;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.dark .history-section p {
+  color: #aaa;
+}
+/* High-contrast styles */
+.high-contrast {
+  background-color: black;
+  color: white;
+}
+
+.high-contrast button {
+  background-color: yellow;
+  color: black;
+}
+
+.high-contrast .app-header {
+  background-color: darkgray;
+}
+
+/* High contrast for other elements like inputs */
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.high-contrast button {
+  background-color: yellow;
+  color: black;
+}
+
+/* Mobile/Tablet/Desktop adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .high-contrast .history-section {
+    background: #111;
+    color: #fff;
+  }
+}
